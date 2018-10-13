@@ -63,4 +63,4 @@ typings/
 node_modules/
 dist/
 zeote/
-.vscode/
+node_modules213/
