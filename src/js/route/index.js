@@ -41,9 +41,7 @@ class Route {
         $('.nav-link').each((item,value)=>{
             console.log(this)
             console.log($(value))
-            // if($(value).attr('path') == location.hash){
-            //     $
-            // }
+            //底部转化
         })
     }
 }
