@@ -2,9 +2,11 @@ const find_html = require('../views/find.html');
 
 const render = () => {
     var template = Handlebars.compile(find_html);
-    $('.root').html(template);
+    $('main').html(template);
 }
 
-module.exports = {
-    render
-}
+// module.exports = {
+//     render
+// }
+
+export default {render}
