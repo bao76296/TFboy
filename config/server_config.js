@@ -15,9 +15,12 @@ const server_config = {
                 '^/test' : ''
             }
         }),
-        proxy('api',{
-            target : 'http://localhost:3000',
-            changeOrigin: true
+        proxy('/api',{
+            target : 'https://h5.ele.me',
+            changeOrigin: true,
+            pathRewrite : {
+                '/api' : ''
+            }
         })
     ]
     

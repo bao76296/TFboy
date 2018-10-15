@@ -24,12 +24,12 @@ gulp.task('copy:static',() => {
 })
 
 gulp.task('copy:scss',() => {
-    gulp.src('./src/*.scss')
+    gulp.src('./src/css/*.scss')
         .pipe(sass({
             outputStyle : 'compressed'
         }).on('error',sass.logError))
         // .pipe(gulp.dest('./src'))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist/css'));
 })
 
 //打包js
@@ -42,7 +42,7 @@ gulp.task('compile:js',() => {
 gulp.task('watch',() => {
     gulp.watch('./src/**/*.html',['copy:html']);
     gulp.watch('./src/js/**/*',['compile:js']);
-    gulp.watch('./src/**/*.scss',['copy:scss']);
+    gulp.watch('./src/css/*.scss',['copy:scss']);
 
     watch('src/static',() => {
         gulp.start(['copy:static']);
