@@ -38,11 +38,21 @@ class Route {
     }
 
     switchActive(){
-        $('.nav-link').each((item,value)=>{
-            console.log(this)
-            console.log($(value))
-            //底部转化
+        $('.nav-link').each(function(){
+           if($(this).attr('path') == location.hash){
+                $(this).addClass('active');
+           }else{
+               $(this).removeClass('active');
+           }
         })
+        // $('.nav-link').each((item,value)=>{
+        //     console.log(this)
+        //     console.log($(value))
+        //     if($(value).attr('path') == location.hash){
+        //         $
+        //     }
+        // })
+        
     }
 }
 export default Route;
