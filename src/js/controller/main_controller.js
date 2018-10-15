@@ -1,4 +1,4 @@
-const index = require('../views/index.html');
+const index = require('../views/main.html');
 
 const render = () => {
     new Promise(function(resolve){
