@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const webpack = require('webpack-stream');
 
+// 全局配置
 const config = require('./config');
 
 const rev = require('gulp-rev');
@@ -10,18 +11,20 @@ const gulpSequence = require('gulp-sequence');
 
 const {webpack_config} = config;
 
-
+// 输出html页面
 gulp.task('copy:html',() => {
     return gulp.src(['./dist/rev/**/*.json','./src/**/*.html'])
         .pipe(revCollector())
         .pipe(gulp.dest('./dist'));
 })
 
+// 输出静态页面
 gulp.task('copy:static',() => {
     return gulp.src('./src/static/**/*.*')
         .pipe(gulp.dest('./dist/static'));
 })
 
+// 处理sass文件
 gulp.task('compile:scss',() => {
     return gulp.src('./src/**/*.scss')
         .pipe(sass({
@@ -45,7 +48,7 @@ gulp.task('compile:js',() => {
 })
 
 
-
+// 执行默认任务
 gulp.task('default',function(cb){
      gulpSequence(['copy:static',  'compile:scss', 'compile:js'], 'copy:html')(cb)
 })
