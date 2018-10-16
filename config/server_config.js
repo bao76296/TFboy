@@ -9,7 +9,7 @@ const server_config = {
     open: true,
     middleware : [
         proxy('/test',{
-            target : 'https://www.smartisan.com/', //https://www.smartisan.com/product/home
+            target : 'https://h5.ele.me/', //https://www.smartisan.com/product/home
             changeOrigin : true,
             pathRewrite : {
                 '^/test' : ''

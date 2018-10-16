@@ -38,10 +38,13 @@ class Route {
     }
 
     switchActive(){
-        $('.nav-link').each((item,value)=>{
-            console.log(this)
-            console.log($(value))
-            //底部转化
+        $('.nav-link').each(function(item){
+            //底部转化,
+            if ( $(this).attr('path') === location.hash ) {
+                $(this).addClass('active');
+            }else {
+                $(this).removeClass('active');
+            }
         })
     }
 }
