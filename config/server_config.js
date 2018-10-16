@@ -4,9 +4,9 @@ const proxy = require('http-proxy-middleware');
 const server_config = {
     host: 'localhost',
     port: 8080,
-    livereload: true,
-    // directoryListing: true,
-    open: true,
+    livereload: true, // 热更新
+    // directoryListing: true, // 开启目录
+    // open: true, // 开启 启动浏览器
     middleware : [
         proxy('/test',{
             target : 'https://www.smartisan.com/', //https://www.smartisan.com/product/home
@@ -15,9 +15,12 @@ const server_config = {
                 '^/test' : ''
             }
         }),
-        proxy('api',{
-            target : 'http://localhost:3000',
-            changeOrigin: true
+        proxy('/api',{
+            target : 'https://h5.ele.me/',
+            changeOrigin: true,
+            pathRewrite : {
+                '^/api' : ''
+            }
         })
     ]
     

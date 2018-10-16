@@ -25,12 +25,10 @@ class Route {
     }
     
     refresh(){
-        console.log()
         let hash = location.hash; //?
        
         if(!this.routes[hash]){
             location.hash = this.initial;
-            console.log(location.hash)
             return ;
         }
         this.routes[hash].render();

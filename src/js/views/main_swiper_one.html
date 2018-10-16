@@ -1,0 +1,24 @@
+<div class="mini__swiper swiper-container">
+    <div class="swiper-wrapper">
+        {{#each swiper_data.entriesSlice}}
+        <div class="swiper-slide">
+            <div class="con__swiper" >
+                {{#each this}}
+                <a href="#" class="con__img">
+                    <img src="https://fuss10.elemecdn.com/{{this.image_hash}}.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
+                        alt="">
+                    <span>{{this.name}}</span>
+                </a>
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<div class="swiper-pagination swiper__shift"></div>
+<!-- <div class="swiper__shift">
+<div class="swiper__page active"></div>
+&nbsp;
+<div class="swiper__page"></div>
+</div> -->
