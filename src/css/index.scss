@@ -1,6 +1,7 @@
 @import './reset/reset'; // 淘宝 reset
 // @import './yo/usage/core/reset.scss';
 @import './iconfont/iconfont';
+@import './my';
 
 body {
     display: flex;
@@ -141,20 +142,22 @@ section {
     width: 1.2rem;
 }
 
-.swiper__shift {
+.swiper-pagination {
     margin-top: 0.1333rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.swiper__shift .swiper__page {
+.swiper-pagination .swiper-pagination-bullet {
+    display: block;
     width: 0.24rem;
     height: 0.0133rem;
     background: #000;
 }
 
-.swiper__shift .swiper__page.active {
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: #00a6ff;
 }
 
@@ -478,7 +481,4 @@ section {
     justify-content: center;
     align-items: center;
     margin-right: 0.0667rem;
-}
-body {
-    background-color: pink;
 }

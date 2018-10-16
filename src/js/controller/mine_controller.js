@@ -7,7 +7,7 @@ const render = () => {
 }
 
 const as = ()=> {
-    $('.btn').on('click',()=>{
+    $('p').on('click',()=>{
         alert('我在做实验！！！')
     })
 }
