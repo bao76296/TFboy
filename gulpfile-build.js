@@ -26,7 +26,7 @@ gulp.task('copy:static',() => {
 
 // 处理sass文件
 gulp.task('compile:scss',() => {
-    return gulp.src('./src/**/*.scss')
+    return gulp.src('./src/css/*.scss')
         .pipe(sass({
             outputStyle : 'compressed'
         }).on('error',sass.logError))
