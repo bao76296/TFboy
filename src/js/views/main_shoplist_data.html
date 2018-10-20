@@ -1,0 +1,87 @@
+{{#each data}}
+<div class="shophome">
+    <div class="conimg"> 
+        <img src="https://fuss10.elemecdn.com/{{this.image_hash}}.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/"
+            alt="">
+    </div>
+    <div class="shophome__datil">
+        <div class="shophome__name"> 
+            <h3>
+                <div class="con_span">
+                    <span class="brand">品牌</span> <span>{{this.restaurant.name}}</span>
+                </div>
+                <span class="symbol">···</span>
+            </h3>
+
+            <div class="evaluate">
+                <div class="evaluate__con">
+                    <div class="conimg">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSIwJSIgeTE9IjUwJSIgeTI9IjUwJSIgaWQ9ImEiPjxzdG9wIHN0b3AtY29sb3I9IiNGRkRFMDAiIG9mZnNldD0iMCUiLz48c3RvcCBzdG9wLWNvbG9yPSIjRkZCMDAwIiBvZmZzZXQ9IjEwMCUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBkPSJNNTQuMDE3IDguMDcybC0yLjU1MiAxLjU2MWMtLjQ3Ni4yOTEtLjc1OC4wOTYtLjYyNi0uNDU1bC42OTYtMi45MDktMi4yNzMtMS45NDRjLS40MjQtLjM2Mi0uMzI1LS42OTEuMjM5LS43MzZsMi45ODItLjIzN0w1My42My41ODljLjIxMy0uNTE1LjU1Ny0uNTIzLjc3NCAwbDEuMTQ2IDIuNzYzIDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2bC0yLjI3NCAxLjk0NC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6bS00OCAwTDMuNDY1IDkuNjMzYy0uNDc2LjI5MS0uNzU4LjA5Ni0uNjI2LS40NTVsLjY5Ni0yLjkwOS0yLjI3My0xLjk0NGMtLjQyNC0uMzYyLS4zMjUtLjY5MS4yMzktLjczNmwyLjk4Mi0uMjM3TDUuNjMuNTg5Yy4yMTMtLjUxNS41NTctLjUyMy43NzQgMEw3LjU1IDMuMzUybDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2TDguNDk3IDYuMjY5bC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6bTEyIDBsLTIuNTUyIDEuNTYxYy0uNDc2LjI5MS0uNzU4LjA5Ni0uNjI2LS40NTVsLjY5Ni0yLjkwOS0yLjI3My0xLjk0NGMtLjQyNC0uMzYyLS4zMjUtLjY5MS4yMzktLjczNmwyLjk4Mi0uMjM3TDE3LjYzLjU4OWMuMjEzLS41MTUuNTU3LS41MjMuNzc0IDBsMS4xNDYgMi43NjMgMi45ODIuMjM3Yy41NTYuMDQ0LjY3LjM2OC4yNC43MzZsLTIuMjc0IDEuOTQ0LjY5NiAyLjkxYy4xMy41NDItLjE0My43NS0uNjI2LjQ1NGwtMi41NTEtMS41NnptMTIgMGwtMi41NTIgMS41NjFjLS40NzYuMjkxLS43NTguMDk2LS42MjYtLjQ1NWwuNjk2LTIuOTA5LTIuMjczLTEuOTQ0Yy0uNDI0LS4zNjItLjMyNS0uNjkxLjIzOS0uNzM2bDIuOTgyLS4yMzdMMjkuNjMuNTg5Yy4yMTMtLjUxNS41NTctLjUyMy43NzQgMGwxLjE0NiAyLjc2MyAyLjk4Mi4yMzdjLjU1Ni4wNDQuNjcuMzY4LjI0LjczNmwtMi4yNzQgMS45NDQuNjk2IDIuOTFjLjEzLjU0Mi0uMTQzLjc1LS42MjYuNDU0bC0yLjU1MS0xLjU2em0xMiAwbC0yLjU1MiAxLjU2MWMtLjQ3Ni4yOTEtLjc1OC4wOTYtLjYyNi0uNDU1bC42OTYtMi45MDktMi4yNzMtMS45NDRjLS40MjQtLjM2Mi0uMzI1LS42OTEuMjM5LS43MzZsMi45ODItLjIzN0w0MS42My41ODljLjIxMy0uNTE1LjU1Ny0uNTIzLjc3NCAwbDEuMTQ2IDIuNzYzIDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2bC0yLjI3NCAxLjk0NC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6IiBmaWxsPSJ1cmwoI2EpIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4="
+            alt="">
+                    </div>
+                    <div class="score">
+                        {{this.restaurant.rating}}
+                    </div>
+                    <div class="order__number">
+                        月售{{this.restaurant.recent_order_num}}单
+                    </div>
+                </div>
+
+                <div class="distribution">
+                    {{this.restaurant.delivery_mode.text}}
+                </div>
+            </div>
+        </div>
+        <div class="shopname__sale">
+            <div class="con__sale">
+                {{#each this.restaurant.piecewise_agent_fee.rules}}
+                <span class="_sale">{{this.price}}起</span>
+                {{/each}}
+                <span>|</span>
+                <span class="distribution">{{this.restaurant.piecewise_agent_fee.description}}</span>
+            </div>
+            <div class="time">
+                <span class="distance">{{this.restaurant.distance}}m</span>
+                <span>|</span>
+                <span class="_time">{{this.restaurant.order_lead_time}}分钟</span>
+            </div>
+        </div>
+        <div class="shopname__mark">
+            {{#each this.restaurant.flavors}}
+            <div class="foods">{{this.name}} </div>
+            {{/each}}
+            <div class="mark__shop">
+                <div class="con__img">
+                    <img src="https://fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!20x20r/gravity/Center/crop/20x20/"
+                        alt="">
+                </div>
+                <span>
+                    口碑人气好店
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="salse__list" style="overflow:hidden">
+    <div class="_left">
+        <div class="_left__list">
+            <div class="list__one">
+                <span>首</span> 新用户下单立减17元
+            </div>
+            <div class="list__one">
+                <span>首</span>
+                <p class="hid">新用户下单立减17元新用户下单立减17元新用户下单立减17元</p>
+            </div>
+            <!-- <div class="list__two">
+                满35减9，满50减15，满70减17，满100减30
+            </div> -->
+        </div>
+    </div>
+    <div class="_right">
+        <span>
+            21个活动
+        </span>
+    </div>
+</div>
+{{/each}}
