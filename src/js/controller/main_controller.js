@@ -3,11 +3,12 @@ const _swiper_one = require('../views/main_swiper_one.html');
 const _banner = require('../views/main_banner.html');
 const _swiper_two = require('../views/main_swiper_two.html');
 const _main_list = require('../views/main_shoplist.html');
-const _main_shop_list = require('../views/main_shoplist_data.html')
+const _main_shop_list = require('../views/main_shoplist_data.html');
 
-
+import BScroll from 'better-scroll'
 import main_swiper from '../models/main_data';
 import { async } from 'rxjs/internal/scheduler/async';
+
 
 
 var bannerData = [];
@@ -18,7 +19,24 @@ const render =  async () => {
         var main_html = Handlebars.compile(main);
         $('main').html(main_html());
         await init_html();
-        console.log(swpierTwoData);
+        // console.log(swpierTwoData);
+        // var bss = new BScroll('.root', {
+        //     scrollY: true,
+        //     bounce: {
+        //         top: false
+               
+        //     }
+        // });
+        // console.log(BScroll);
+        window.loading = true;
+        $(window).on('scroll',async function(){
+            if($(window).scrollTop() + $('.root').height() == $('main').height() && window.loading){
+                window.loading = false;
+                await getShopList();
+                console.log(123)
+                window.loading = true;
+            }
+        })
         
 }
 
@@ -36,16 +54,9 @@ const init_html = async () => {
 const shop_list = async () => {
     
     var template = Handlebars.compile(_main_list);
-    var _html = template();
+    var _html = template(); 
     $('.__shoplist').html(_html);
-
-    template = Handlebars.compile(_main_shop_list);
-    _html = template({data : shoplist});
-    $('.shoplist').html(_html);
     await getShopList();
-
-
-//    console.log(shoplist,123)
 }
 
 //添加 商家列表
@@ -53,7 +64,7 @@ const getShopList = async () => {
     await getShoplistData();
     var template = Handlebars.compile(_main_shop_list);
     var _html = template({data : shoplist});
-    $('.shoplist').html(_html);
+    $('.shoplist').before(_html); 
 }
 
 
@@ -62,9 +73,27 @@ const getShoplistData = async () => {
     
     var temps = (await main_swiper.main_shoplist()).items;
     setImageHash(temps, 'image_path')
+    
+    temps.forEach((item, ele) => {
+        if(item.restaurant.activities){
+            if(item.restaurant.activities[0]){
+                item.restaurant.tips_one ={
+                    tips : item.restaurant.activities[0].tips,
+                    icon_name : item.restaurant.activities[0].icon_name
+                }
+            }
+            if(item.restaurant.activities[1]){
+                item.restaurant.tips_two ={
+                    tips : item.restaurant.activities[1].tips,
+                    icon_name : item.restaurant.activities[1].icon_name
+                } 
+            }
+        }
+    })
+  
+ 
     shoplist = temps;
     // shoplist.push( ... ((await main_swiper.main_shoplist()).items));
-    console.log(shoplist)
 }
 
 //打折商品
@@ -124,7 +153,6 @@ const swiper_two_html = async() => {
 }
 
 const setImageHash = (arr, prop) => {
-    console.log(arr)
     arr.forEach(item => {
         let str = '';
         if(prop){

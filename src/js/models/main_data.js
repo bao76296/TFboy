@@ -12,7 +12,7 @@ const main_swiper = () => {
 
 //第二个轮播图
 const main_two_swiper = () => {
-    return $.ajax({
+    return $.ajax({ 
         url : '/api/restapi/shopping/v2/banners?consumer=1&type=1&latitude=47.352424&longitude=123.931074',
         type : 'get',
         success : res => {

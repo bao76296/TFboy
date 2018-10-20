@@ -23,6 +23,7 @@
     "webpack-stream": "^5.1.1"
   },
   "dependencies": {
+    "better-scroll": "^1.13.2",
     "yo3": "^3.1.8"
   },
   "scripts": {
