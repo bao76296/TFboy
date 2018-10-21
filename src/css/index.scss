@@ -360,6 +360,9 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    span{
+        color: #333;
+    }
 }
 
 .shophome .shophome__datil .shophome__name h3 .con_span .brand {

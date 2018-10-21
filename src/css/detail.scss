@@ -1,0 +1,433 @@
+// @import './reset/reset'; // 淘宝 reset
+@import './yo/usage/core/reset.scss';
+@import './iconfont/iconfont';
+
+body{
+    background: white;
+    position: relative;
+    overflow-y:auto;
+}
+.title{
+    .return {
+        position: absolute;
+        z-index: 3;
+        top:0.2rem;
+        left:0.2667rem;
+        i{
+            font-size: 0.4667rem;
+            // color:red;
+            color:#fff;
+        }
+    }
+    padding-top : 2.6667rem;
+    background: white;
+    .blur{
+        height:2.6667rem;
+        position: absolute;
+        width:100%;
+        top:0;
+        // -webkit-filter: blur(10px);
+        // filter:blur(10px);
+        &::before{
+            content: '';
+            position: absolute;
+            width:100%;
+            height:2.6667rem;
+            background-color: rgba(119,103,137,.43);
+        }
+    }
+    .conimg{
+        border-radius: 0.1067rem;
+        height:20vw;
+        width:20vw;
+        position: absolute;
+        left:50%;
+        transform: translate(-1rem,-1.6667rem);
+        img{
+            display: block;
+            border-radius: 0.1067rem;
+        }
+    }
+    .name__detail{
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #333;
+        .names{
+            padding-top:0.4rem;
+            .name{
+                display: flex;
+                text-align: center;
+                font-size: 0.5467rem;
+                font-weight: 700;
+                position: relative;
+                i{
+                   position: relative;
+                    &::after{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width:0;
+                        height:0;
+                        border-width:0.2rem;
+                        border-style: solid;
+                        border-color:transparent transparent transparent #333;
+                        top:0.2667rem;
+                        left:0.0667rem;
+                    }
+                }
+            }
+            .name--detail{
+                margin-top:0.1333rem;
+                font-size: 0.2667rem;
+                font-family: PingFang SC,Helvetica Neue,Arial,sans-serif;
+            }
+        }
+        .activity{
+            height:6.4vw;
+            width: 3.8667rem;
+            line-height: 0.64rem;
+            vertical-align: center;
+            background : #fff4f4;
+            vertical-align: center;
+            margin-top:16px;
+            display: flex;
+            flex-direction: row;
+            font-size: 0.4267rem;
+            justify-content: space-around;
+            align-items:center;
+            .activity__one{
+                padding-left:0.4rem;
+                display: flex;
+                flex-direction: row;
+                .moeny{
+                    .moeny--meta{
+                        font-size: 0.32rem;
+                    }
+                    .moeny--price{
+                        font-weight: 700;
+                    }
+                }
+                .ky{
+                  
+                    font-size: 0.2933rem;
+                }
+            }
+            .activity__two{
+                line-height: 0.64rem;
+                vertical-align: center;
+                padding-right:0.2667rem;
+                .lq{
+                    font-size: 0.2933rem;
+                }
+            } 
+        }
+        .mj{
+            margin-top:0.2667rem;
+            width:8rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.2933rem;
+            .con__tip{
+                display: flex;
+                
+                .tip{
+                    display: block;
+                    color:white;
+                    font-weight: 700;
+                    background-color:rgb(240, 115, 115);
+                    font-size: 0.24rem;
+                    margin-right:0.1067rem;
+                    height: 3.466667vw;
+                    line-height: 3.466667vw;    
+                    padding: 0 1.2vw;
+                }
+            }
+            .tips{
+                position: relative;
+                color: #999;
+                &::after{
+                    content: "";
+                    width:0;
+                    height:0;
+                    border-style:solid;
+                    border-width:0.1067rem;
+                    border-color:#999 transparent transparent transparent;
+                    position: absolute;
+                    right:-0.2667rem;
+                    top:0.1067rem;
+                }
+            }
+        }
+        .gg{
+            width:8rem;
+            display: flex;
+            flex-direction : row;
+            color:#999;
+            margin:0.2667rem 0;
+            p{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+
+.shoptab{
+    background: white;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    display: flex;
+    flex-direction:row;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+    height:1.0667rem;
+    border-bottom:0.0133rem solid #999;
+    p{
+        height:1.0667rem;
+        line-height:1.0667rem;
+        font-size: 0.4rem;
+        color:#999; 
+       
+       
+    }
+    .active{
+        font-weight: 700;
+        color:#333;
+        border-bottom:5px solid rgb(35, 149, 255);
+    }
+}
+
+main{
+    background: white;
+    padding-top:0.4rem;
+    .title__shop{
+        padding-left:0.4267rem;
+        font-weight: 700;
+        color:#333;
+        font-size: 0.4267rem;
+        margin-bottom:0.2667rem;
+    }
+    .con__swiper{
+        .wap__swiper{
+            .con__flex:first-of-type{
+                margin-left: 0.4267rem;
+            }
+            .sli__wiper{
+                margin-right:0.3333rem;
+                .con__flex{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width:3.2rem;
+                    overflow: hidden;
+                
+                    margin-right:0.4rem;
+
+                    img{
+                        height:3.2rem;
+                        width:3.2rem;
+                        border-radius: 0.1067rem;
+                    }
+                    .swiper__foods--name{
+                        span{
+                            width:3.2rem;
+                            display: block;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        align-self: flex-start;
+                        text-align: left;
+                    
+                        margin-top:0.1867rem;
+                        margin-bottom: 0.0933rem;
+                        font-size: 0.3733rem;
+                        color:#333;
+                    }
+                    .swiper__foods--sell{
+                        width:100%;
+                        font-size: 0.2667rem;
+                        margin-bottom: 0.1333rem;
+                        color:#999;
+                    }
+                    .swiper__foods--price{
+                        span{
+                            font-size: 0.4rem;
+                        }
+                        font-size: 0.48rem;
+                        color: rgb(255, 83, 57);
+                        width:100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        svg{
+                            height:0.5867rem;
+                            width:0.5867rem;
+                            fill: rgb(35, 149, 255);
+                            
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .menu{
+        margin-top:0.2667rem;
+        display: flex;
+        justify-content: row;
+        .menu__right{
+          
+            position: sticky;
+            top: -1.3333rem;
+            z-index: 2;
+            li{
+                padding:0.4667rem 0.2rem;
+                font-size: 0.32rem;
+            }
+            a{
+                color:#333;
+            }
+        }
+        .menu__left{
+            width:8rem;
+            dt{
+                padding:0.2rem 0.8rem 0.2rem 0;
+                .food_name{
+                    color:#666;
+                    font-size: 0.32rem;
+                    font-weight: 700;
+                }
+                .food_name_detail{
+                    font-size: 0.2667rem;
+                    color:#999;
+                }
+            }
+            dd{
+                padding:0.2667rem 0;
+                display: flex;
+                flex-direction: row;
+                .dd_riht{
+                    width:2.5333rem;
+                    height:2.5333rem;
+                    margin-right:0.2667rem;
+                    img{
+                        display: block;
+                        width: 100%;
+                        height:100%;
+                        border-radius: 0.1067rem;
+                    }
+                    
+                }
+                .dd_left{
+                    
+                    padding-right:0.4rem;
+                    display: flex;
+                    flex-grow: 1;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    .swiper__foods--name{
+                        span{
+                            width:3.2rem;
+                            display: block;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            font-size: 0.4rem;
+                            color:#333;
+                            font-weight: 700;
+                        }
+                        align-self: flex-start;
+                        text-align: left;
+                    
+                       
+                        font-size: 0.3733rem;
+                        color:#333;
+                    }
+                    .swiper__foods--sell{
+                        width:100%;
+                        font-size: 0.2667rem;
+                        margin-bottom: 0.1333rem;
+                        color:#999;
+                    }
+                    .swiper__foods--price{
+                        align-self: flex-end;
+                        span{
+                            font-size: 0.4rem;
+                        }
+                        font-size: 0.48rem;
+                        color: rgb(255, 83, 57);
+                        width:100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        svg{
+                            height:0.5867rem;
+                            width:0.5867rem;
+                            fill: rgb(35, 149, 255);
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    position:fixed;
+    height:1.28rem;
+    width:100vw;
+    background-color:rgba(61,61,63,.9);
+    bottom:0;
+    .conimg{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .bkimg{
+            border: 0.1067rem solid rgba(61,61,63,.9); 
+            border-radius: 50%;
+            position: relative;
+            top:-0.4rem;
+            left:0.9333rem;
+            height:1.0667rem;
+            width:1.0667rem;
+            background-size: 6vw;
+            background-color:rgba(61,61,63,.9); 
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTggNTgiPjxkZWZzPjxmaWx0ZXIgaWQ9ImEiIHdpZHRoPSIyMDAlIiBoZWlnaHQ9IjIwMCUiIHg9Ii01MCUiIHk9Ii01MCUiIGZpbHRlclVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCI+PGZlT2Zmc2V0IGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz48ZmVHYXVzc2lhbkJsdXIgaW49InNoYWRvd09mZnNldE91dGVyMSIgcmVzdWx0PSJzaGFkb3dCbHVyT3V0ZXIxIiBzdGREZXZpYXRpb249IjEuNSIvPjxmZUNvbG9yTWF0cml4IGluPSJzaGFkb3dCbHVyT3V0ZXIxIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMSIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwLjA4IDAiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49InNoYWRvd01hdHJpeE91dGVyMSIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT48L2ZpbHRlcj48cGF0aCBpZD0iYiIgZD0iTTcuNjE0IDQuMDUxYy0xLjA2Ni4wODYtMS40NTItLjM5OC0xLjc1Mi0xLjU4NEM1LjU2MiAxLjI4LjMzIDUuODguMzMgNS44OGwzLjcxIDE5LjQ3NmMwIC4xNDgtMS41NiA3LjUxNS0xLjU2IDcuNTE1LS40ODkgMi4xOS4yOTIgNC4yNyAzLjU2IDQuMzIgMCAwIDM2LjkxNy4wMTcgMzYuOTIuMDQ3IDEuOTc5LS4wMTIgMi45ODEtLjk5NSAzLjAxMy0zLjAzOS4wMy0yLjA0My0xLjA0NS0yLjk3OC0yLjk4Ny0yLjk5M0w4LjgzIDMxLjE5MnMuODYtMy44NjUgMS4wNzctMy44NjVjMCAwLTUuNzg4LjEyMiAzMi4wNjUtMS45NTYuNjA2LS4wMzMgMi4wMTgtLjc2NCAyLjI5OC0xLjg0OCAxLjExMy00LjMxNyA0LjAwOC0xMy4yNiA0LjQ1OC0xNS42NC45MzItNC45MjUgMi4wNjEtOC41NTgtNC4yOC03LjQwNSAwIDAtMzUuNzY4IDMuNDg3LTM2LjgzMyAzLjU3M3oiLz48L2RlZnM+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWx0ZXI9InVybCgjYSkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMgMikiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUuMDM4IDcuODA4KSI+PG1hc2sgaWQ9ImMiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2IiLz48L21hc2s+PHVzZSBmaWxsPSIjRkZGIiB4bGluazpocmVmPSIjYiIvPjxwYXRoIGZpbGw9IiMyMDczQzEiIGQ9Ik01My45NjIgNy43NzRsLTUuNzAxIDE5LjMwNS00MC43OCAxLjU3NHoiIG1hc2s9InVybCgjYykiIG9wYWNpdHk9Ii4xIi8+PC9nPjxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjYiIGQ9Ik05LjM3NCAxOC43MjJTNy44NjggMTEuMjgzIDcuMzIzIDguNzFDNi43NzggNi4xMzYgNS44NiA1LjMzIDMuOTc4IDQuNTIgMi4wOTYgMy43MTMuMzY3IDIuMjg2LjM2NyAyLjI4NiIvPjxjaXJjbGUgY3g9IjQ2IiBjeT0iNTEiIHI9IjQiIGZpbGw9IiNGRkYiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjUxIiByPSI0IiBmaWxsPSIjRkZGIi8+PC9nPjwvc3ZnPg==');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .shop_song{
+
+            display: block;
+            color:white;
+            font-weight: 700;
+            width:2.8rem;
+            height:1.28rem;
+            line-height: 1.28rem;
+            font-size: 0.4rem;
+            background: #535356;
+            text-align: center;
+            align-self: flex-end;
+        }
+        .shop{
+            display: block;
+            font-size: 0.336rem;
+            color:#999;
+        }
+    }
+}

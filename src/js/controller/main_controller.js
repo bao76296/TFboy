@@ -7,7 +7,6 @@ const _main_shop_list = require('../views/main_shoplist_data.html');
 
 import BScroll from 'better-scroll'
 import main_swiper from '../models/main_data';
-import { async } from 'rxjs/internal/scheduler/async';
 
 
 

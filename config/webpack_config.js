@@ -1,7 +1,8 @@
 const webpack_config = {
     mode : 'development', //production development
     entry : {
-        app : './src/js/app.js'
+        app : './src/js/app.js',
+        detail : './src/js/detail.js'
     },
     output : {
         filename : '[name].js'
