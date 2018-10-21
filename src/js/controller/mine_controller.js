@@ -7,8 +7,8 @@ const render = () => {
 }
 
 const as = ()=> {
-    $('p').on('click',()=>{
-        alert('我在做实验！！！')
+    $('.login_box').on('click',()=>{
+        
     })
 }
 
