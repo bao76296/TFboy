@@ -63,6 +63,7 @@ typings/
 .vscode/
 node_modules/
 dist/
+dev/
 zeote/
 node_modules213/
 

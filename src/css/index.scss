@@ -1,7 +1,12 @@
 @import './reset/reset'; // 淘宝 reset
 // @import './yo/usage/core/reset.scss';
 @import './iconfont/iconfont';
-body {
+//order界面scss
+@import 'order';
+
+
+
+body { 
     display: flex;
     flex-direction: column;
     

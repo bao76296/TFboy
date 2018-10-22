@@ -8,19 +8,19 @@ const config = require('./config')
 const {server_config, webpack_config} = config;
 
 gulp.task('webserver',() =>{
-    gulp.src('./dist')
+    gulp.src('./dev')
         .pipe(webserver(server_config));
         
 })
 
 gulp.task('copy:html',() => {
     gulp.src('./src/**/*.html')
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dev'));
 })
 
 gulp.task('copy:static',() => {
     gulp.src('./src/static/**/*.*')
-        .pipe(gulp.dest('./dist/static'));
+        .pipe(gulp.dest('./dev/static'));
 })
 
 gulp.task('copy:scss',() => {
@@ -29,14 +29,14 @@ gulp.task('copy:scss',() => {
             outputStyle : 'compressed'
         }).on('error',sass.logError))
         // .pipe(gulp.dest('./src'))
-        .pipe(gulp.dest('./dist/css'));
+        .pipe(gulp.dest('./dev/css'));
 })
 
 //打包js
 gulp.task('compile:js',() => {
     gulp.src('./src/js/**/*.js')
         .pipe(webpack(webpack_config))
-        .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('./dev/js'));
 })
 
 gulp.task('watch',() => {

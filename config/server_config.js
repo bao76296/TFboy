@@ -21,6 +21,14 @@ const server_config = {
             pathRewrite : {
                 '/api' : ''
             }
+        }),
+        proxy('/orderapi',{
+            target : 'https://h5.ele.me',
+            changeOrigin : true,
+            // type: 'post',
+            pathRewrite : {
+                '^/orderapi' : ''
+            }           
         })
     ]
     
