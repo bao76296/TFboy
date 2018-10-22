@@ -4,9 +4,9 @@
 //order界面scss
 @import 'order';
 
+@import './my';
 
-
-body { 
+body {
     display: flex;
     flex-direction: column;
     

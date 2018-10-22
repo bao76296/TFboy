@@ -1,0 +1,130 @@
+@import './reset/reset'; 
+@import './iconfont/iconfont';
+body {
+    height: 17.733333rem;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    .information_header {
+        height: 1.173333rem;
+        .information_header_wrapper {
+            position: fixed;
+            top: 0;left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 1.173333rem;
+            color: #fff;
+            font-size: .48rem;
+            background-image: linear-gradient(90deg, #0af, #0085ff);
+            // background: #2395ff;
+            .information_header_left {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 1.173333rem;
+                height: 1.173333rem;
+                img {
+                    width: .32rem;
+                    max-width: 100%;
+                }
+            }
+            h1 {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                height: 1.173333rem;
+                max-width: 50%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: 700;
+                font-size: 1em;
+                line-height: 1.173333rem;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+            }
+        }
+    }
+    div {
+        .main_username {
+            background-color: #fff;
+            width: 100%;
+            font-size: .426667rem;
+            color: #333;
+            .username_img {
+                padding: .266667rem .373333rem;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                b {
+                    font-weight: bold;
+                }
+                .username_img_right {
+                    display: flex;
+                    align-items: center;
+                    div {
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        border-radius: 50%;
+                        span {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            display: inline-block;
+                            background: url('https://shadow.elemecdn.com/faas/h5/static/sprite.3ffb5d8.png') no-repeat;
+                            background-position: 0px -180px;
+                            background-size: 1.6rem;
+                        }
+                    }
+                    svg {
+                        fill: #ddd;
+                        height: .48rem;
+                        width: .48rem;
+                        display: inline-block;
+                        line-height: 1.2rem;
+                        padding-top: .133333rem;   
+                    }
+                }
+            }
+            .username_id {
+                padding: .266667rem .373333rem;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: .373333rem;
+                border-top: 1px solid #eee;
+                b {
+                    font-weight: bold;
+                }
+                span {
+                    color: #666;
+                    svg {
+                        fill: #ddd;
+                        height: .48rem;
+                        width: .48rem;
+                        display: inline-block;
+                        line-height: 1.2rem;
+                        padding-top: .133333rem;   
+                    }
+                }
+            }
+        }
+        .log_out {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: .373333rem 0;
+            margin: .533333rem 0;
+            color: #ff5339;
+            border-radius: .08rem;
+            font-size: .426667rem;
+            font-weight: 700;
+            background-color: #fff;
+        }
+    }
+}
