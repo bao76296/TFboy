@@ -1,7 +1,12 @@
 @import './reset/reset'; // 淘宝 reset
 // @import './yo/usage/core/reset.scss';
 @import './iconfont/iconfont';
-body {
+//order界面scss
+@import 'order';
+
+
+
+body { 
     display: flex;
     flex-direction: column;
     
@@ -152,13 +157,16 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+   margin-top:0.1333rem;
+   margin-bottom:0.1333rem;
+   
     position: relative;
 }
 
 .swiper__shift .swiper-pagination-bullet {
     display: block;
-    width: 0.24rem;
-    height: 0.0133rem;
+    width:2.4vw;
+    height:.4vw;
     background: #000;
     width:2.4vw;
     height:.4vw;
