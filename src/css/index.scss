@@ -9,7 +9,7 @@
 body {
     display: flex;
     flex-direction: column;
-    
+   
 }
 
 html,body{
@@ -98,7 +98,7 @@ footer {
     padding-top: 0.12rem;
     padding-bottom: 0.0667rem;
     height: 1.2133rem;
-    box-shadow: 0 -0.0667rem 0.0267rem rgba(158, 155, 155, 0.527);
+    box-shadow: 0 -0.266667vw 0.533333vw rgba(0,0,0,.1);
 
 }
 
@@ -124,6 +124,7 @@ footer a.active {
 }
 
 section {
+    background: white;
     padding-bottom: 1.3333rem;
     /* background: #f3f3f3; */
   

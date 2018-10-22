@@ -1,9 +1,9 @@
 const main = require('../views/main.html');
-const _swiper_one = require('../views/main_swiper_one.html');
-const _banner = require('../views/main_banner.html');
-const _swiper_two = require('../views/main_swiper_two.html');
-const _main_list = require('../views/main_shoplist.html');
-const _main_shop_list = require('../views/main_shoplist_data.html');
+const _swiper_one = require('../views/main/main_swiper_one.html');
+const _banner = require('../views/main/main_banner.html');
+const _swiper_two = require('../views/main/main_swiper_two.html');
+const _main_list = require('../views/main/main_shoplist.html');
+const _main_shop_list = require('../views/main/main_shoplist_data.html');
 
 import BScroll from 'better-scroll'
 import main_swiper from '../models/main_data';
