@@ -1,11 +1,12 @@
-// @import './reset/reset'; // 淘宝 reset
-@import './yo/usage/core/reset.scss';
+@import './reset/reset'; // 淘宝 reset
+// @import './yo/usage/core/reset.scss';
 @import './iconfont/iconfont';
 
 body{
     background: white;
     position: relative;
-    overflow-y:auto;
+  
+    
 }
 .title{
     .return {
@@ -286,22 +287,30 @@ main{
     .menu{
         margin-top:0.2667rem;
         display: flex;
-        justify-content: row;
+        flex-direction: row;
+        
         .menu__right{
-          
+            height:100vh;
+            width:20vw;
+            background-color: #f8f8f8;
             position: sticky;
-            top: -1.3333rem;
+            top: 1.08rem;
             z-index: 2;
+            margin-right:0.2667rem;
+            flex-shrink: 1;
             li{
                 padding:0.4667rem 0.2rem;
                 font-size: 0.32rem;
+            }
+            li.active{
+                background:white;
             }
             a{
                 color:#333;
             }
         }
         .menu__left{
-            width:8rem;
+            width : 79.466667vw;
             dt{
                 padding:0.2rem 0.8rem 0.2rem 0;
                 .food_name{
@@ -387,6 +396,7 @@ main{
 }
 
 footer{
+    z-index: 10;
     position:fixed;
     height:1.28rem;
     width:100vw;
@@ -424,10 +434,24 @@ footer{
             text-align: center;
             align-self: flex-end;
         }
+       
         .shop{
             display: block;
             font-size: 0.336rem;
             color:#999;
+        }
+    }
+    .conimg.active{
+        .bkimg{
+            background-color: #3190e8;
+        }
+        .shop{
+            font-size: 0.48rem;
+            color:white;
+            font-weight: 700;
+        }
+        .shop_song{
+            background-color: #38ca73;
         }
     }
 }
