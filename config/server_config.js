@@ -18,6 +18,14 @@ const server_config = {
         proxy('api',{
             target : 'http://localhost:3000',
             changeOrigin: true
+        }),
+        proxy('/orderapi',{
+            target : 'https://h5.ele.me',
+            changeOrigin : true,
+            // type: 'post',
+            pathRewrite : {
+                '^/orderapi' : ''
+            }           
         })
     ]
     

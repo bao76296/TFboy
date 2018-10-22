@@ -14,6 +14,7 @@ index_main_render.render();
 import Route from './route/index'
 
 const route = new Route({ initial : '#/index'});
+
 route.init();
 
 
