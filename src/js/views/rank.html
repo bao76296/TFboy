@@ -1,11 +1,13 @@
 {{#each data}}
 <div class="list-of-one">
-    <span class="list-top">1</span>
-    <img class="list-img" src="http://fuss10.elemecdn.com/8/37/43140d4328a8dccd58de1c4cb5620png.png?imageMogr/format/webp/"
+    <span class="list-top">{{this.num}}</span>
+    <!-- src="http://fuss10.elemecdn.com/8/37/43140d4328a8dccd58de1c4cb5620png.png?imageMogr/format/webp/" -->
+    <img class="list-img"
+     src={{this.src}}
         alt="">
-    <span class="list-name">aaa</span>
-    <span>ssss</span>
-    <div class="list-button">1111111</div>
+    <span class="list-name">{{this.name}}</span>
+    <span class="votes">{{this.votes}}票</span>
+    <div class="list-button">加油</div>
 </div>
 {{/each}}
         

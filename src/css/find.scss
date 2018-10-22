@@ -142,7 +142,7 @@ body{
                 align-items: center;
                 position: relative;
                 color: white;
-
+                margin-bottom: .533333rem;
                 .list-top{
                     display: block;
                     height: 6.8vw;
@@ -175,13 +175,16 @@ body{
                     margin-top: -3.466667vw;
                     padding: 0 2.133333vw;
                 }
+                .votes{
+                    margin: .133333rem 0;
+                }
                 .list-button{
                     min-width: 1.6rem;
                     min-width: 12vw;
                     height: .586667rem;
                     height: 5.866667vw;
-                    margin-top: .213333rem;
-                    margin-top: 2.133333vw;
+                    // margin-top: .213333rem;
+                    // margin-top: 2.133333vw;
                     padding: 0 .453333rem;
                     padding: 0 4.533333vw;
                     font-size: .346667rem;
@@ -191,6 +194,7 @@ body{
                     background-color: #e94619;
                     border-radius: .293333rem;
                     border-radius: 2.933333vw;
+                    text-align: center;
                 }
             }
         }
