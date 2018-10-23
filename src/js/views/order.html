@@ -9,35 +9,38 @@
                 订单
             </h1>
         </div>
-        {{#each data}}
+        
         <div class="total-container">
             <div class="order-list">
                 <div class="theone-of-orderlist">
                     <a class="order-details" href="javascript:;">
                         <div class="order-store">
-                            <img class="order-store-img" src="https://fuss10.elemecdn.com/0/98/dcae8ae27f14be0d2e2ed46a742fdjpeg.jpeg?imageMogr/format/webp/thumbnail/!64x64r/gravity/Center/crop/64x64/"
+                            <img class="order-store-img" src="//fuss10.elemecdn.com/3/f9/3d74047272748ef06842b7a3b6b14jpeg.jpeg?imageMogr/format/webp/thumbnail/150x/"
                                 alt="" class="store-img">
                             <div class="order-store-details">
                                 <div class="order-store-details-container">
                                     <div class="order-status-container">
-                                        <h2 class="order-store-name">{{this.restaurant_name}}</h2>
-                                        <span class="current-status-of-order">订单已取消</span>
+                                        <h2 class="order-store-name">{{data.shopName}}</h2>
+                                        <span class="current-status-of-order">等待支付</span>
                                     </div>
                                     <div class="pd-arrival-time">
-                                        {{this.formatted_created_at}}
+                                        {{data.time}}
                                     </div>
                                 </div>
                                 <div class="the-totalnumber-of-goods">
-                                    <p><span>麻辣鸡翅</span><span>4件商品</span></p>
-                                    <span class="total-prices-of-goods">￥54.30</span>
+                                    <p><span>{{data.goodName}}等</span><span>{{data.num}}件商品</span></p>
+                                    <span class="total-prices-of-goods">￥{{data.price}}</span>
                                 </div>
                             </div>
 
                         </div>
                     </a>
+                    <div class="order-paybtn">
+                        <span>去支付(还剩</span><span class="timespan">10</span>秒)
+                    </div>
                 </div>
             </div>
         </div>
-        {{/each}}
+        
     </div>
 </div>
