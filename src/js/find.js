@@ -18,8 +18,8 @@ let templatehtml = Handlebars.compile(rank_html);
             // var o = data[0].logo;
             var data = res.data;
             data.forEach((ele,index )=> {
-                ele.num = index;
-                console.log(index,44444444444444)
+                ele.num = index + 1;
+                // console.log(index,44444444444444)
                 var logosrc = ele.logo
                 var aaa = logosrc.substr(3,logosrc.length )
                 var imgsrc = 

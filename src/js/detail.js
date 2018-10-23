@@ -89,6 +89,14 @@ const _footerInit = () => {
 //购物车
 const shopCar = () => {
     
+   
+    if(window.localStorage.shopcar){
+        var data = JSON.parse(window.localStorage.shopcar)
+        $('.conimg').addClass('active').find('.shop_song').text('去结算').end().find('.shop').text('￥' + parseFloat(data.price).toFixed(2));
+    }
+    
+
+
     $('svg').on('tap', function(){
         let str = $(this).parent().find('div').text().trim();
         str = str.substring(1, str.length)
@@ -108,7 +116,7 @@ const shopCar = () => {
         data.num = data.num == undefined ? 1 : ++data.num;
         data.goodName = $(this).parent().parent().find('.swiper__foods--name').text().trim();
         data.price = data.price == undefined ? price : data.price + price;
-        console.log(data);
+        // console.log(data);
         window.localStorage.shopcar = JSON.stringify(data) ;
         $('.conimg').addClass('active').find('.shop_song').text('去结算').end().find('.shop').text('￥' + parseFloat(data.price).toFixed(2));
      })
