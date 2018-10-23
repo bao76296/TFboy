@@ -1,18 +1,18 @@
 
 
-import rotes from './route';
+import routes from './route';
 
 class Route {
     constructor({initial}){
-        this.routes = rotes;
+        this.routes = routes;
         this.initial = initial || '#/index'
     }
     init(){
-        this.initialLoacl();
+        this.initialLocal();
         this.listenHashChange();
     }
 
-    initialLoacl(){
+    initialLocal(){
         if(!location.hash){
             location.hash = this.initial;
             console.log('ok')

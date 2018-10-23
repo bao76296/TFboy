@@ -160,7 +160,8 @@ const setImageHash = (arr, prop) => {
         else{
             str = item.image_hash;
         }
-        item.image_hash = str.substring(0,1) + '/'+ str.substring(1,3) + '/' + str.substring(3,str.length);
+        let tail = str.indexOf('png') == -1 ? '.jpeg' : '.png';
+        item.image_hash = str.substring(0,1) + '/'+ str.substring(1,3) + '/' + str.substring(3,str.length) + tail;
         if(item.more){
             item.more = JSON.parse(item.more);
         }
